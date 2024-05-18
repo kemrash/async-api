@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Star Jedi Hollow";
+  src: url("../fonts/starjhol.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+:root {
+  --gray: #c8c8c8;
+  --yellow: #ffe300;
+  --chetwode-blue: #8586D6;
+  --red: #B4040E;
+  --black: #1c1e22;
+}
+
+.page {
+  min-width: 320px;
+  font-family: "Star Jedi Hollow", sans-serif;
+  font-weight: 400;
+  background-color: var(--black);
+  overflow-wrap: anywhere;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1700px;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  color: var(--yellow);
+}
+
+.title_yellow {
+  color: var(--yellow);
+}
+
+.title_gray {
+  color: var(--gray);
+}
+
+.title_big {
+  font-size: 60px;
+}
+
+.title_small {
+  font-size: 30px;
+}
+
+.text {
+  margin: 0;
+  font-size: 22px;
+  color: var(--gray);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: var(--gray);
+}
+
+.link_btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid currentColor;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+.app-sw {
+  padding: 60px 0;
+}
+
+.app-sw__title {
+  margin-bottom: 30px;
+}
+
+.app-sw__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.app-sw__link {
+  margin-bottom: 30px;
+}
+
+.app-sw__desc {
+  margin-bottom: 30px;
+}
+
+.app-sw__subtitle {
+  margin-bottom: 30px;
+}
+
+.planets,
+.species {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.app-sw__list:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.link_btn:focus-visible {
+  color: var(--red);
+}
+
+.link_btn:active:not(:focus-visible) {
+  color: var(--chetwode-blue);
+}
+
+.film__desc,
+.film__subtitle {
+  transition: color .3s ease-in-out;
+}
+
+.film__link:focus-visible .film__desc,
+.film__link:focus-visible .film__subtitle {
+  color: var(--red);
+}
+
+.film__link:active:not(:focus-visible) .film__desc,
+.film__link:active:not(:focus-visible) .film__subtitle {
+  color: var(--chetwode-blue);
+}
+
+@media (any-hover: hover) {
+  .link_btn:hover:not(:focus-visible):not(:active) {
+    color: var(--red);
+  }
+
+  .film__link:hover:not(:focus-visible):not(:active) .film__desc,
+  .film__link:hover:not(:focus-visible):not(:active) .film__subtitle {
+    color: var(--red);
+  }
+}
+
+@media (max-width: 767px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .title_big {
+    font-size: 36px;
+  }
+
+  .app-sw {
+    padding: 30px 0;
+  }
+
+  .app-sw__title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .app-sw__list {
+    display: block;
+  }
+}
